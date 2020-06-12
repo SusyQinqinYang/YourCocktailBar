@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "./components/Home";
-import Name from "./components/Name";
-import Ingredient from "./components/Ingredient";
+import Home from "./components/Home/Home";
+import Name from "./components/CocktailName/Name";
+import Ingredient from "./components/Ingredient/Ingredient";
 import {
-    HashRouter as Router,
-//   BrowserRouter as Router,
+  HashRouter as Router,
+  //   BrowserRouter as Router,
   Switch,
   Route,
   NavLink,
@@ -16,23 +16,36 @@ const App = (props) => {
   return (
     <Router>
       <div>
-        <h1 className='title'>Your Cocktail Bar</h1>
-        <div className="nav">
-          <NavLink to="/" className="nav-home">
-            Home
-          </NavLink>
-          {/* <NavLink to="/cocktail/name" className="nav-cocktail">Name</NavLink>
+        <div className="Header" style={{ marginBottom: "15px" }}>
+          <h1 className="title">Your Cocktail Bar</h1>
+          <div className="nav">
+            <NavLink to="/" className="nav-home">
+              Home
+            </NavLink>
+            {/* <NavLink to="/cocktail/name" className="nav-cocktail">Name</NavLink>
           <NavLink to="/cocktail/ingredient" className="nav-cocktail">ingredient</NavLink> */}
+          </div>
         </div>
 
         <hr />
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/cocktail/name" render={() => <Redirect to="/cocktail/name/margarita" />} />
+          <Route
+            exact
+            path="/cocktail/name"
+            render={() => <Redirect to="/cocktail/name/margarita" />}
+          />
           <Route path="/cocktail/name/:name" component={Name} />
-          <Redirect exact from="/cocktail/ingredient/" to="/cocktail/ingredient/vodka" />
-          <Route path="/cocktail/ingredient/:ingredient" component={Ingredient} />
+          <Redirect
+            exact
+            from="/cocktail/ingredient/"
+            to="/cocktail/ingredient/vodka"
+          />
+          <Route
+            path="/cocktail/ingredient/:ingredient"
+            component={Ingredient}
+          />
         </Switch>
       </div>
     </Router>

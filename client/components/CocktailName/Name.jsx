@@ -27,20 +27,19 @@ const Name = (props) => {
       });
   };
 
-//   console.log("drinksWithRecipe", drinksWithRecipe);
-
   return (
     <div>
+      <div className="search">
       <input
         type="text"
         placeholder="Search by cocktail name"
-        className="search-input"
+        className="searchInSubPage search-input"
         onChange={(e) => setName(e.target.value)}
       />
       <Link to={`/cocktail/name/${name}`}>
         <button className="btn-search">Search</button>
       </Link>
-
+      </div>
       {Object.values(drinksWithRecipe).length > 0 ? drinksWithRecipe.drinks.map((drinkWithRecipe, ind) => {
         return <RecipeRender key={ind} drinkWithRecipe={drinkWithRecipe} />;
       }) : ''}
