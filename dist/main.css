@@ -1,0 +1,41 @@
+/*============================
+    Name Page
+==============================*/
+
+.recipeByName {
+  width: 85%;
+  margin: 20px auto;
+  /* border-top: 1px solid grey; */
+}
+.name-h3 {
+    text-align: center;
+}
+.flex-container {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid grey;
+}
+
+.flex-container > div {
+    padding: 20px;
+}
+.flex-container h5{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+.flex-container p{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px;
+}
+img {
+    width: 350px;
+}
+.recipe-info div {
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: circle;
+    margin-top: 0px;
+  }
