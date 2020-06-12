@@ -1,0 +1,125 @@
+/*============================
+   Header Cross All Pages
+==============================*/
+.Header {
+    text-align: center;
+}
+/*============================
+    Home Page
+==============================*/
+/*----Cocktail Section----*/
+.search {
+  width: 83%;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  padding-left:0px;
+}
+.home h4 {
+    margin-bottom: 10px;
+}
+.search-h4 {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.search-input {
+  width: 200px;
+  height: 15px;
+}
+.btn-search {
+  height: 20px;
+  margin: 0px 25px 0px 10px;
+}
+.btn-search:hover {
+  color: rgb(3, 68, 129);
+  background-color: rgb(180, 226, 243);
+  cursor: pointer;
+}
+
+/*----Cocktail Section----*/
+.cocktails {
+  width: 80%;
+  margin: 20px auto;
+}
+.title-h3 {
+  text-align: center;
+  margin-left:0px;
+}
+.home-flex-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid grey;
+}
+.home-flex-container > a {
+  margin: 10px 0px 0px 30px;
+  text-align: center;
+}
+.home-flex-container img {
+  width: 210px;
+}
+
+/*============================
+    Name Page & Ingredient Page
+==============================*/
+/*----Search Section----*/
+.searchInSubPage {
+  margin: 0px 10px 0px 0px;
+}
+
+/*----Recipe || Ingredient Section----*/
+.recipeByName {
+  width: 85%;
+  margin: 20px auto;
+  /* border: 1px solid grey; */
+}
+.name-h3 {
+  text-align: center;
+}
+.flex-container {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid grey;
+}
+
+.flex-container > div {
+  padding: 20px;
+}
+.flex-container h5 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+.flex-container p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px;
+}
+img {
+  width: 350px;
+}
+.recipe-info .ingredient-info div {
+  margin-bottom: 10px;
+}
+ul {
+  list-style-type: circle;
+  margin-top: 0px;
+}
+
+/*============================
+    Ingredient Page
+==============================*/
+.ingredient {
+  width: 80%;
+  margin: 20px auto;
+  /* border: 1px solid grey; */
+}
+
+.ingredient-flex {
+  overflow: auto;
+  height: 250px;
+}
+
+.ingredient-flex img {
+  width: 200px;
+}
