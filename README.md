@@ -44,4 +44,4 @@ This can be deployed using AWS.
 ## Demo
 
 Open [Your Cocktail Bar](https://bit.ly/yourcocktailbar)
-![alt text](http://g.recordit.co/leAPSnnpcP.gif)
+![alt text](http://g.recordit.co/f4uyDxJrN7.gif)
