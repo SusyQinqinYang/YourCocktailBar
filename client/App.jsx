@@ -14,11 +14,11 @@ import {
 
 const App = (props) => {
   return (
-    <Router>
+    <Router >
       <div>
-        <div className="Header" style={{ marginBottom: "15px" }}>
-          <h1 className="title">Your Cocktail Bar</h1>
-          <div className="nav">
+        <div className="Header" >
+          <h1 className="page-title">Your Cocktail Bar</h1>
+          <div className="nav" >
             <NavLink to="/" className="nav-home">
               Home
             </NavLink>
@@ -27,7 +27,7 @@ const App = (props) => {
           </div>
         </div>
 
-        <hr />
+       <div className="page-body">
 
         <Switch>
           <Route exact path="/" component={Home} />
@@ -47,6 +47,7 @@ const App = (props) => {
             component={Ingredient}
           />
         </Switch>
+        </div>
       </div>
     </Router>
   );

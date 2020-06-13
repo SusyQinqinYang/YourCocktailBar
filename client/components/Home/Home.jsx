@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Home = (props) => {
-  const list = [
+  const cocktailList = [
     {
       strDrink: "Mojito",
       strDrinkThumb:
@@ -47,14 +47,26 @@ const Home = (props) => {
       idDrink: "11009",
     },
   ];
+  const ingredientLIst = [
+    "Vodka",
+    "Gin",
+    "Rum",
+    "Tequila",
+    "Scotch",
+    "Irish whiskey",
+    "Triple sec",
+    "Brandy"
+  ];
   const [name, setName] = useState("");
   const [ingredient, setIngredient] = useState("");
-  const [cocktails, setCocktails] = useState(list);
+  const [cocktails, setCocktails] = useState(cocktailList);
+  // const [ingredients, setCocktails] = useState(cocktailList);
+
 
   return (
     <div className="home">
       <div className="search">
-        <h4 className="search-h4">Find your recipe</h4>
+        <h4 className="search-h4">Find Your Recipe</h4>
         <form className="recipe-form">
           <input
             type="text"
@@ -76,22 +88,45 @@ const Home = (props) => {
           </Link>
         </form>
       </div>
-      <div className="cocktails">
+      <div className="cocktails-ingredient">
         <h4 className="title-h4">What Is Popular</h4>
-        <div className='home-flex-container'>
-        {cocktails.map((cocktail, ind) => {
-          return (
-            <Link key={ind} to={`/cocktail/name/${cocktail.strDrink}`}>
-            <div className="each-cocktail">
-              <img src={cocktail.strDrinkThumb}/>
-              <p>{cocktail.strDrink}</p>
-            </div>
-            </Link>
-          )
-        })}
+        <div className="home-ingredient-flex-container">
+          {cocktails.map((cocktail, ind) => {
+            return (
+              <Link
+                className="each-cocktail-ingredient"
+                key={ind}
+                to={`/cocktail/name/${cocktail.strDrink}`}
+              >
+                <div>
+                  <img src={cocktail.strDrinkThumb} />
+                  <p>{cocktail.strDrink}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
+      <div className="cocktails-ingredient">
+        <h4 className="title-h4">Ingredient List</h4>
+        <div className="home-ingredient-flex-container">
+          {ingredientLIst.map((ingredient, ind) => {
+            return (
+              <Link
+                className="each-cocktail-ingredient"
+                key={ind}
+                to={`/cocktail/ingredient/${ingredient}`}
+              >
+                <div>
+                  <img src={`https://www.thecocktaildb.com/images/ingredients/${ingredient}-Medium.png`} />
+                  <p>{ingredient}</p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

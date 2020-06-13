@@ -1,8 +1,40 @@
 /*============================
-   Header Cross All Pages
+   Header Cross All Pages and Other Cross Whole Web Sections
 ==============================*/
+
+body {
+    background-color: rgba(203, 201, 201, 0.977);
+    font-family: 'Playfair Display', serif;
+}
 .Header {
-    text-align: center;
+  text-align: center;
+  color: rgb(238, 236, 231);
+  background-image: url(https://cdn.pixabay.com/photo/2012/12/09/00/16/smoke-69124_1280.jpg);
+}
+.page-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.nav {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+.nav-home {
+  color: rgb(56, 115, 169);
+  font-weight: 700;
+}
+
+.page-body {
+  width: 100%;
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+
 }
 /*============================
     Home Page
@@ -11,60 +43,76 @@
 .search {
   width: 83%;
   text-align: center;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   margin-left: 100px;
-  padding-left:0px;
+  padding-top: 5px;
+  padding-left: 0px;
 }
 .home h4 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .search-h4 {
-    margin-left: 0px;
-    padding-left: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 .search-input {
   width: 200px;
-  height: 15px;
+  height: 20px;
+  border-radius: 5px;
 }
 .btn-search {
-  height: 20px;
+  height: 25px;
   margin: 0px 25px 0px 10px;
+  color: white;
+  background-color: rgb(56, 115, 169);
+  border-radius: 5px;
+
 }
 .btn-search:hover {
-  color: rgb(3, 68, 129);
-  background-color: rgb(180, 226, 243);
+  color: lightgrey;
+  background-color: rgb(83, 168, 213);
   cursor: pointer;
 }
 
-/*----Cocktail Section----*/
-.cocktails {
+/*----Cocktail Section for home and ingredient----*/
+.cocktails-ingredient {
   width: 80%;
-  margin: 20px auto;
+  margin: 20px auto 0px auto;
 }
-.title-h3 {
+.title-h4 {
   text-align: center;
-  margin-left:0px;
+  margin-left: 0px;
 }
-.home-flex-container {
+.home-ingredient-flex-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid grey;
 }
-.home-flex-container > a {
+.home-ingredient-flex-container > a {
   margin: 10px 0px 0px 30px;
   text-align: center;
 }
-.home-flex-container img {
+.home-ingredient-flex-container img {
   width: 210px;
 }
 
+.each-cocktail-ingredient {
+    text-decoration: none;
+}
+.each-cocktail-ingredient:hover {
+    opacity: 0.5;
+}
+.each-cocktail-ingredient p{
+    margin-top: 5px;
+}
 /*============================
     Name Page & Ingredient Page
 ==============================*/
 /*----Search Section----*/
 .searchInSubPage {
-  margin: 0px 10px 0px 0px;
+  margin: 20px 10px 0px 0px;
 }
 
 /*----Recipe || Ingredient Section----*/
@@ -83,20 +131,21 @@
 }
 
 .flex-container > div {
-  padding: 20px;
+  padding: 10px;
 }
 .flex-container h5 {
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 5px;
-  padding: 0px;
+  padding-top: 5px;
 }
 .flex-container p {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0px;
+  font-size: 17px;
 }
 img {
-  width: 350px;
+  width: 250px;
 }
 .recipe-info .ingredient-info div {
   margin-bottom: 10px;
@@ -104,6 +153,8 @@ img {
 ul {
   list-style-type: circle;
   margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 17px;
 }
 
 /*============================
@@ -112,14 +163,15 @@ ul {
 .ingredient {
   width: 80%;
   margin: 20px auto;
+margin-bottom: 50px;
   /* border: 1px solid grey; */
 }
 
 .ingredient-flex {
   overflow: auto;
-  height: 250px;
+  height: 200px;
 }
 
 .ingredient-flex img {
-  width: 200px;
+  width: 180px;
 }
